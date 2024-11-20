@@ -28,14 +28,6 @@ class _HomeScreenState extends State<HomeScreen> {
 
   @override
   Widget build(BuildContext context) {
-    if (_navBarWidgets.isEmpty) {
-      return const Scaffold(
-        body: Center(
-          child: CircularProgressIndicator(),
-        ),
-      );
-    }
-
     return Scaffold(
       body: _navBarWidgets[_selectedNavBarIndex],
       bottomNavigationBar: BottomNavigationBar(
