@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:simple_beautiful_checklist_exercise/features/statistics/screens/statistics_screen.dart';
-import 'package:simple_beautiful_checklist_exercise/shared/database_repository.dart';
+import 'package:simple_beautiful_checklist_exercise/data/database_repository.dart';
+import 'package:simple_beautiful_checklist_exercise/src/features/statistics/screens/statistics_screen.dart';
 
-import 'features/task_list/screens/list_screen.dart';
+import 'list_screen.dart';
 
 class HomeScreen extends StatefulWidget {
   const HomeScreen({super.key, required this.repository});

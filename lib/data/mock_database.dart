@@ -1,4 +1,4 @@
-import 'package:simple_beautiful_checklist_exercise/shared/database_repository.dart';
+import 'package:simple_beautiful_checklist_exercise/data/database_repository.dart';
 
 class MockDatabase implements DatabaseRepository {
   final List<String> _items = [];

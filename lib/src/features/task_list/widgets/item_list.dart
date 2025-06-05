@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:simple_beautiful_checklist_exercise/shared/database_repository.dart';
+import 'package:simple_beautiful_checklist_exercise/data/database_repository.dart';
 
 class ItemList extends StatelessWidget {
   const ItemList({
@@ -26,8 +26,9 @@ class ItemList extends StatelessWidget {
               IconButton(
                 icon: const Icon(Icons.edit),
                 onPressed: () {
-                  TextEditingController editController =
-                      TextEditingController(text: items[index]);
+                  TextEditingController editController = TextEditingController(
+                    text: items[index],
+                  );
                   showDialog(
                     context: context,
                     builder: (context) {
@@ -37,7 +38,8 @@ class ItemList extends StatelessWidget {
                           autofocus: true,
                           controller: editController,
                           decoration: const InputDecoration(
-                              hintText: "Task bearbeiten"),
+                            hintText: "Task bearbeiten",
+                          ),
                         ),
                         actions: [
                           TextButton(
@@ -53,7 +55,7 @@ class ItemList extends StatelessWidget {
                               updateOnChange();
                               Navigator.of(context).pop();
                             },
-                          )
+                          ),
                         ],
                       );
                     },

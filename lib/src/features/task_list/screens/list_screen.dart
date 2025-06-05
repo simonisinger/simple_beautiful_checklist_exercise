@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:simple_beautiful_checklist_exercise/features/task_list/widgets/empty_content.dart';
-import 'package:simple_beautiful_checklist_exercise/features/task_list/widgets/item_list.dart';
-import 'package:simple_beautiful_checklist_exercise/shared/database_repository.dart';
+import 'package:simple_beautiful_checklist_exercise/data/database_repository.dart';
+import 'package:simple_beautiful_checklist_exercise/src/features/task_list/widgets/empty_content.dart';
+import 'package:simple_beautiful_checklist_exercise/src/features/task_list/widgets/item_list.dart';
 
 class ListScreen extends StatefulWidget {
   const ListScreen({

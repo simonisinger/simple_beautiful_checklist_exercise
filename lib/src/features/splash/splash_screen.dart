@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:shimmer/shimmer.dart';
-import 'package:simple_beautiful_checklist_exercise/config/constants.dart';
 
 class SplashScreen extends StatefulWidget {
   const SplashScreen({super.key});
@@ -15,7 +14,7 @@ class _SplashScreenState extends State<SplashScreen> {
   void initState() {
     super.initState();
 
-    Future.delayed(const Duration(milliseconds: longDelayInMS), () {
+    Future.delayed(const Duration(milliseconds: 2000), () {
       if (mounted) {
         Navigator.pushReplacementNamed(context, '/home');
       }
@@ -38,11 +37,11 @@ class _SplashScreenState extends State<SplashScreen> {
                 child: Text(
                   'Willkommen zur Checkliste!',
                   style: GoogleFonts.robotoMono(
-                    textStyle:
-                        Theme.of(context).textTheme.headlineMedium?.copyWith(
-                              fontSize: 36,
-                              fontWeight: FontWeight.w800,
-                            ),
+                    textStyle: Theme.of(context).textTheme.headlineMedium
+                        ?.copyWith(
+                          fontSize: 36,
+                          fontWeight: FontWeight.w800,
+                        ),
                   ),
                 ),
               ),
