@@ -6,7 +6,7 @@ class MockDatabaseRepository implements DatabaseRepository {
   final List<String> _items = [];
 
   @override
-  Future<int> get itemCount async {
+  Future<int> getItemCount() async {
     await Future.delayed(const Duration(milliseconds: 100));
     return _items.length;
   }

@@ -1,6 +1,6 @@
 abstract class DatabaseRepository {
   // Gibt die Anzahl der Items zurück.
-  Future<int> get itemCount;
+  Future<int> getItemCount();
 
   // Gibt die Items zurück.
   Future<List<String>> getItems();

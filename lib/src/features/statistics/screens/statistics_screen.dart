@@ -18,7 +18,7 @@ class _StatisticsScreenState extends State<StatisticsScreen> {
   int currentTaskCount = 0;
 
   void loadItemCount() async {
-    int taskCount = await widget.repository.itemCount;
+    int taskCount = await widget.repository.getItemCount();
 
     if (taskCount != currentTaskCount) {
       setState(() {
