@@ -51,8 +51,7 @@ class ItemList extends StatelessWidget {
                           TextButton(
                             child: const Text('Speichern'),
                             onPressed: () {
-                              repository.editItem(index, editController.text);
-                              updateOnChange();
+                              repository.editItem(index, editController.text).then((_) => updateOnChange());
                               Navigator.of(context).pop();
                             },
                           ),
@@ -64,8 +63,8 @@ class ItemList extends StatelessWidget {
               ),
               IconButton(
                 icon: const Icon(Icons.delete),
-                onPressed: () {
-                  repository.deleteItem(index);
+                onPressed: () async {
+                  await repository.deleteItem(index);
                   updateOnChange();
                 },
               ),
